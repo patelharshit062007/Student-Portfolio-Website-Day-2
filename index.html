@@ -3,102 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit - Premium Portfolio Website</title>
-    <!-- External Upgraded CSS link -->
+    <title>Student Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- ==========================================
-         NAVBAR (Glassmorphic Floating Layout)
-         ========================================== -->
+    <!-- Navbar -->
+
     <header>
-        <nav class="navbar">
-            <div class="logo">HARSHIT<span class="dot">.</span></div>
-            <ul class="nav-links">
+
+        <div class="logo">
+            Your Name
+        </div>
+
+        <nav>
+
+            <ul>
+
                 <li><a href="#home">Home</a></li>
+
                 <li><a href="#about">About</a></li>
+
                 <li><a href="#skills">Skills</a></li>
+
                 <li><a href="#contact">Contact</a></li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <main>
-        <!-- ==========================================
-             HERO SECTION (Bold Dynamic Typography)
-             ========================================== -->
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <p class="greeting">// WELCOME TO MY PORTFOLIO</p>
-                <h1>Hi, I'm <span class="highlight">Harshit</span></h1>
-                <p class="role">Frontend Developer</p>
-                <p class="intro">I engineer high-performance, visually polished, and user-centric web experiences with clean, semantic architecture.</p>
-                <a href="#contact" class="btn-primary">Contact Me <span class="arrow">➔</span></a>
-            </div>
-        </section>
+    <!-- Hero Section -->
 
-        <!-- ==========================================
-             ABOUT SECTION (Premium Spacing & Readability)
-             ========================================== -->
-        <section id="about" class="about-section">
-            <div class="section-container">
-                <span class="section-tag">01 / DISCOVER</span>
-                <h2>About Me</h2>
-                <p>
-                    Hello! I am a passionate front-end web developer student. I love creating clean, 
-                    structured, and interactive interfaces that provide great user experiences. Currently, 
-                    I am expanding my skills through hands-on practice, focusing heavily on layout integrity, 
-                    modern micro-interactions, and scalable design structures.
-                </p>
-            </div>
-        </section>
+    <section id="home" class="hero">
 
-        <!-- ==========================================
-             SKILLS SECTION (Interactive Minimalist Badges)
-             ========================================== -->
-        <section id="skills" class="skills-section">
-            <div class="section-container">
-                <span class="section-tag">02 / EXPERTISE</span>
-                <h2>My Skills</h2>
-                <p class="subtitle">Core stack and web technologies I specialize in:</p>
-                <ul class="skills-list">
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Responsive UI</li>
-                </ul>
-            </div>
-        </section>
+        <div class="hero-text">
 
-        <!-- ==========================================
-             CONTACT SECTION (Sleek High-Contrast Info Block)
-             ========================================== -->
-        <section id="contact" class="contact-section">
-            <div class="section-container">
-                <span class="section-tag">03 / CONNECT</span>
-                <h2>Get In Touch</h2>
-                <p class="subtitle">Feel free to reach out for collaborations, review, or opportunities.</p>
-                <div class="contact-info">
-                    <div class="info-row">
-                        <span class="info-label">Email</span>
-                        <span class="info-value">harshit@example.com</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Phone</span>
-                        <span class="info-value">+91 98765 43210</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Location</span>
-                        <span class="info-value">India</span>
-                    </div>
-                </div>
+            <h1>Hi, I'm Your Name</h1>
+
+            <h3>Frontend Developer</h3>
+
+            <p>
+                I build responsive and user-friendly websites
+                using HTML and CSS.
+            </p>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="images/profile.png" alt="Profile">
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+
+            I am a passionate Frontend Developer who loves
+            creating beautiful and responsive websites.
+
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skill-box">
+
+            <div class="card">
+                HTML5
             </div>
-        </section>
-    </main>
+
+            <div class="card">
+                CSS3
+            </div>
+
+            <div class="card">
+                Responsive Design
+            </div>
+
+            <div class="card">
+                UI Design
+            </div>
+
+        </div>
+
+    </section>
+        <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact-container">
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
 
     <footer>
-        <p>&copy; 2026 HARSHIT. Crafted with clean architecture.</p>
+
+        <p>
+            © 2026 Your Name | All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>

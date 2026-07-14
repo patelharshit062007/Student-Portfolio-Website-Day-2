@@ -1,59 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Patel Harshit</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio Website</title>
+    <!-- Future styling ke liye style.css ko pehle se link kar diya hai -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="logo">Patel Harshit</h1>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Hi, I'm Patel Harshit</h2>
-      <p>Frontend Developer</p>
-      <p>I build responsive and user-friendly websites.</p>
-      <div class="buttons">
-        <a href="#about" class="btn">About</a>
-        <a href="#skills" class="btn">Skills</a>
-        <a href="#contact" class="btn">Contact</a>
-      </div>
-    </div>
-    <div class="hero-img">
-      <img src="profile.png" alt="Profile Image" />
-    </div>
-  </section>
+    <!-- ==========================================
+         STEP 2: NAVBAR SECTION
+         ========================================== -->
+    <header>
+        <nav>
+            <!-- Your name / logo -->
+            <div class="logo">
+                <strong>Patel Harshit</strong>
+            </div>
+            
+            <!-- STEP 3: Basic Linking using IDs for section scrolling -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about" class="section">
-    <h3>About Me</h3>
-    <p>I’m passionate about creating visually appealing and functional websites using HTML, CSS, and JavaScript.</p>
-  </section>
+    <main>
+        <!-- ==========================================
+             STEP 2: HERO SECTION (#home)
+             ========================================== -->
+        <section id="home">
+            <h1>Hi, I'm Patel Harshit</h1>
+            <p>Frontend Developer</p>
+            <p>I build responsive and user-friendly websites.</p>
+            <!-- Contact Button -->
+            <a href="#contact"><button type="button">Contact Me</button></a>
+        </section>
 
-  <section id="skills" class="section">
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </section>
+        <hr> <!-- Sections ko visually alag dikhane ke liye -->
 
-  <section id="contact" class="section">
-    <h3>Contact</h3>
-    <p>Email:patelharshit062007@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/your-username">Patel Harshit</a></p>
-  </section>
+        <!-- ==========================================
+             STEP 2: ABOUT SECTION (#about)
+             ========================================== -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am a passionate computer science student and an aspiring front-end web developer. 
+                I love creating clean, structured, and beautiful interfaces that provide great user experiences. 
+                Currently, I am expanding my skills through hands-on projects and professional internships.
+            </p>
+        </section>
 
-  <footer>
-    <p>© 2026 Patel Harshit | Frontend Developer</p>
-  </footer>
+        <hr>
+
+        <!-- ==========================================
+             STEP 2: SKILLS SECTION (#skills)
+             ========================================== -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <p>Here are the core technologies I work with:</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- ==========================================
+             STEP 2: CONTACT SECTION (#contact)
+             ========================================== -->
+        <section id="contact">
+            <h2>Contact Details</h2>
+            <p>Feel free to reach out to me for collaborations or opportunities!</p>
+            <ul>
+                <li><strong>Email:</strong> patelharshit062007@gmail.com</li>
+                <li><strong>Phone:</strong> +91 9328517842</li>
+                <li><strong>Location:</strong> Ahemdabad, India</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portfolio. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

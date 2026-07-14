@@ -1,0 +1,226 @@
+/* ==========================================
+   1. RESET & BASIC STYLING (Step 2)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #121212; /* Premium Deep Black Background */
+    color: #ffffff; /* Crisp White Text Base */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   2. NAVBAR DESIGN (Step 3)
+   ========================================== */
+header {
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Add spacing between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+/* Link active effect */
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   3. HERO SECTION (Step 3 & 4)
+   ========================================== */
+.hero-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center content horizontally */
+    padding: 40px 20px;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.hero-content .highlight {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff; /* White emphasis accent underline */
+}
+
+.hero-content .role {
+    font-size: 20px;
+    color: #888888;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content .intro {
+    font-size: 16px;
+    color: #cccccc;
+    max-width: 550px;
+    margin: 0 auto 30px auto;
+}
+
+/* Polished Monochrome Button */
+.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #121212;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+    background-color: #121212;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   4. GENERAL SECTIONS STYLING (Step 3, 4 & 6)
+   ========================================== */
+section:not(.hero-section) {
+    padding: 80px 20px; /* Uniform layout spacing between sections */
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.section-container {
+    max-width: 750px;
+    margin: 0 auto; /* Center alignment check */
+}
+
+section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    color: #ffffff;
+}
+
+.subtitle {
+    color: #888888;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+/* About description text settings */
+.about-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+/* ==========================================
+   5. SKILLS SECTION LAYOUT (Step 3)
+   ========================================== */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list li {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333333;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skills-list li:hover {
+    border-color: #ffffff;
+    background-color: #222222;
+}
+
+/* ==========================================
+   6. CONTACT SECTION (Step 3)
+   ========================================== */
+.contact-info {
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info strong {
+    color: #ffffff;
+    display: inline-block;
+    width: 100px;
+}
+
+/* ==========================================
+   7. FOOTER
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #121212;
+    color: #666666;
+    font-size: 14px;
+    margin-top: auto;
+}

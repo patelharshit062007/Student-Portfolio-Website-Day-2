@@ -1,216 +1,284 @@
 /* ==========================================
-   1. RESET & BASIC STYLING (Step 2)
+   1. CORE ARCHITECTURE & SYSTEM RESET
    ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-    background-color: #121212; /* Premium Deep Black Background */
-    color: #ffffff; /* Crisp White Text Base */
+    background-color: #0a0a0a; /* Premium Cinematic Pitch Black */
+    color: #f5f5f5;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 /* ==========================================
-   2. NAVBAR DESIGN (Step 3)
+   2. FLOATING GLASS NAVBAR
    ========================================== */
 header {
-    background-color: #1a1a1a;
+    background: rgba(18, 18, 18, 0.8); /* Frosted Dark glass header */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 18px 24px;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo .dot {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Subtle logo indicator glow */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Add spacing between links */
+    gap: 32px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #a0a0a0;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.25s ease;
+    color: #888888;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Link active effect */
 .nav-links a:hover {
     color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 /* ==========================================
-   3. HERO SECTION (Step 3 & 4)
+   3. HIGH-POLISH HERO LAYOUT
    ========================================== */
 .hero-section {
-    min-height: 75vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center content horizontally */
-    padding: 40px 20px;
-    border-bottom: 1px solid #1e1e1e;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+}
+
+/* Subtle background digital wireframe accent pattern */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content .greeting {
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 16px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+    margin-bottom: 8px;
+    letter-spacing: -1.5px;
+    color: #ffffff;
 }
 
 .hero-content .highlight {
-    color: #ffffff;
-    border-bottom: 3px solid #ffffff; /* White emphasis accent underline */
+    background: linear-gradient(to right, #ffffff, #a3a3a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-content .role {
-    font-size: 20px;
-    color: #888888;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .hero-content .intro {
-    font-size: 16px;
-    color: #cccccc;
-    max-width: 550px;
-    margin: 0 auto 30px auto;
+    font-size: 17px;
+    color: #a3a3a3;
+    max-width: 600px;
+    margin: 0 auto 36px auto;
+    line-height: 1.7;
 }
 
-/* Polished Monochrome Button */
+/* Futuristic White Solid Button */
 .btn-primary {
     display: inline-block;
     text-decoration: none;
     background-color: #ffffff;
-    color: #121212;
-    padding: 12px 28px;
+    color: #0a0a0a;
+    padding: 14px 32px;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
-    background-color: #121212;
+    background-color: #0a0a0a;
     color: #ffffff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover .arrow {
+    transform: translateX(4px);
 }
 
 /* ==========================================
-   4. GENERAL SECTIONS STYLING (Step 3, 4 & 6)
+   4. CONTENT SECTIONS LAYOUT
    ========================================== */
 section:not(.hero-section) {
-    padding: 80px 20px; /* Uniform layout spacing between sections */
-    border-bottom: 1px solid #1e1e1e;
+    padding: 100px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .section-container {
-    max-width: 750px;
-    margin: 0 auto; /* Center alignment check */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-tag {
+    display: block;
+    font-size: 11px;
+    color: #525252;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
 section h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
     color: #ffffff;
 }
 
 .subtitle {
-    color: #888888;
+    color: #737373;
     font-size: 15px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
-/* About description text settings */
 .about-section p {
     font-size: 16px;
     line-height: 1.8;
-    color: #cccccc;
+    color: #c2c2c2;
 }
 
 /* ==========================================
-   5. SKILLS SECTION LAYOUT (Step 3)
+   5. SKILLS INTERACTIVE BADGES
    ========================================== */
 .skills-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 16px;
 }
 
 .skills-list li {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border: 1px solid #333333;
-    padding: 10px 24px;
+    background-color: #121212;
+    color: #e5e5e5;
+    border: 1px solid #262626;
+    padding: 12px 28px;
     font-weight: 600;
     font-size: 14px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    border-radius: 8px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Cyberpunk White Neon focus border trigger */
 .skills-list li:hover {
     border-color: #ffffff;
-    background-color: #222222;
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================
-   6. CONTACT SECTION (Step 3)
+   6. UPGRADED CONTACT BOX
    ========================================== */
 .contact-info {
-    background-color: #1a1a1a;
-    border: 1px solid #262626;
-    padding: 30px;
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #1a1a1a;
+    padding: 10px 0;
+    border-radius: 12px;
 }
 
-.contact-info p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #cccccc;
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-.contact-info p:last-child {
-    margin-bottom: 0;
+.info-row:last-child {
+    border-bottom: none;
 }
 
-.contact-info strong {
+.info-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666666;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 15px;
     color: #ffffff;
-    display: inline-block;
-    width: 100px;
+    font-weight: 500;
 }
 
 /* ==========================================
@@ -218,9 +286,9 @@ section h2 {
    ========================================== */
 footer {
     text-align: center;
-    padding: 30px 20px;
-    background-color: #121212;
-    color: #666666;
-    font-size: 14px;
+    padding: 40px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: #404040;
+    font-size: 13px;
     margin-top: auto;
 }
